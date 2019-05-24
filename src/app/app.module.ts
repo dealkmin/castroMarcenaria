@@ -18,3 +18,13 @@ import { CarouselComponent } from './carousel/carousel.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
+@NgModule({
+  ...
+  imports: [NgbModule, ...],
+  ...
+})
+export class YourAppModule {
+}
