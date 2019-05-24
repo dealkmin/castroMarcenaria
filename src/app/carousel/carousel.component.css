@@ -1,20 +1,27 @@
-.slider {
-  display: block;
-  height: 293px;
-  width: 600px;
-  margin: auto;
-  margin-top: 20px;
-  position: relative;
+.carousel {
+  width: 360px;
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.slider li {
-  list-style: none;
-  position: absolute;
+.carousel-item {
+  object-fit: cover;
+  height: 360px;
 }
 
-.slider img {
-  margin: auto;
-  height: 100%;
-  width: 100%;
-  vertical-align: top;
+@media only screen and (min-width: 768px) {
+  .carousel {
+    width: 520px;
+    height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carousel-item {
+    object-fit: cover;
+    height: 520px;
+  }
 }

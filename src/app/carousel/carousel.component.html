@@ -1,17 +1,29 @@
-<ul class="slider">
-  <li>
-    <input type="radio" id="slide1" name="slide" checked />
-    <label for="slide1"></label>
-    <img src="images/1.jpg" />
-  </li>
-  <li>
-    <input type="radio" id="slide2" name="slide" />
-    <label for="slide2"></label>
-    <img src="images/2.jpg" />
-  </li>
-  <li>
-    <input type="radio" id="slide3" name="slide" />
-    <label for="slide3"></label>
-    <img src="images/3.jpg" />
-  </li>
-</ul>
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <img
+      *ngFor="let image of images; let index = index"
+      src="assets/images/{{ image }}"
+      class="carousel-item"
+      [class.active]="index === 0"
+      alt="Image {{ index }}"
+    />
+  </div>
+  <a
+    class="carousel-control-prev"
+    href="#carouselExampleControls"
+    role="button"
+    data-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a
+    class="carousel-control-next"
+    href="#carouselExampleControls"
+    role="button"
+    data-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
