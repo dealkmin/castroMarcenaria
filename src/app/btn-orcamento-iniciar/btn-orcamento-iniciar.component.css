@@ -1,0 +1,29 @@
+#logo {
+   position: relative;
+   left: 145px;
+   top: 87.5px;
+}
+#btn {
+   position: relative;
+   left: 35px;
+   top:262.5px;
+}
+
+.zoom {
+  background-color:red;
+  transition: transform .2s;
+  width: 350px;
+  height: 350px;
+  box-align: center;
+  position: absolute;
+  top: 215px;
+  left:170px;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
+}
+
+
