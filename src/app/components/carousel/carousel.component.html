@@ -1,12 +1,20 @@
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
-    <img
+    <div    
       *ngFor="let image of images; let index = index"
-      src="assets/images/{{ image }}"
-      class="carousel-item"
       [class.active]="index === 0"
+      class="carousel-item">
+      <img
+      src="assets/images/{{ image.src }}"
       alt="Image {{ index }}"
-    />
+      />
+      <div class="carousel-caption d-none d-md-block">
+        <h5>
+          {{image.comment}}
+        </h5>
+        <p>e todo mundo concorda</p>
+      </div>
+    </div>
   </div>
   <a
     class="carousel-control-prev"

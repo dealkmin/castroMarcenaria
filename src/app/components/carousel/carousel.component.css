@@ -1,17 +1,18 @@
 .carousel {
   width: 360px;
   height: 360px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative; 
-  top: 70px;
-  left:700px;
+  margin-top: 15%;
+  margin-left: 10%;
+
 }
 
+
 .carousel-item {
-  object-fit: cover;
   height: 360px;
+}
+.carousel-item > img {
+  object-fit: cover;
+  width: 360px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -24,7 +25,11 @@
   }
 
   .carousel-item {
-    object-fit: cover;
     height: 520px;
+  }
+
+  .carousel-item > img {
+    object-fit: cover;
+    width: 520px;
   }
 }

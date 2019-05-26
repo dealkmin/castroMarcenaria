@@ -9,6 +9,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './pages/home/home.component';
 import { EstimateComponent } from './pages/estimate/estimate.component';
 import { FormComponent } from './components/form/form.component';
+import { ZoomHoverComponent } from './components/zoom-hover/zoom-hover.component';
+import { GridHomeComponent } from './grid-home/grid-home.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { FormComponent } from './components/form/form.component';
     CarouselComponent,
     HomeComponent,
     EstimateComponent,
-    FormComponent
+    FormComponent,
+    ZoomHoverComponent,
+    GridHomeComponent
   ],
   imports: [BrowserModule, NgbModule, AppRoutingModule],
   providers: [],
