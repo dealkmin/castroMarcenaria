@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
 import { RootComponent } from './root/root.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
