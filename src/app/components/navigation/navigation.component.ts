@@ -3,7 +3,7 @@ import { ROUTES } from '../../app-routing.module';
 import { Router, Routes } from '@angular/router';
 
 @Component({
-  selector: 'app-header',
+  selector: 'app-navigation',
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.css']
 })

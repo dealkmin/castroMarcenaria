@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
   @Input() data: any;
+  @Input() type: string;
 
   constructor() {}
 

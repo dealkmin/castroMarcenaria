@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Estimate } from '../../models/estimate';
+import { EstimateService } from '../../services/estimate.service';
 
 @Component({
   selector: 'app-estimate',
@@ -7,14 +7,11 @@ import { Estimate } from '../../models/estimate';
   styleUrls: ['./estimate.component.css']
 })
 export class EstimateComponent implements OnInit {
-  rooms: Estimate;
   forms: any[];
   currentForm: number;
 
-  constructor() {
+  constructor(private estimateService: EstimateService) {
     this.currentForm = 0;
-    this.rooms = new Estimate();
-    this.forms = [[this.rooms.constructor.name], 'sapato2', 'sapato3'];
   }
 
   ngOnInit() {}
