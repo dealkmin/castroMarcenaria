@@ -1,1 +1,21 @@
-{{ data }}
+<form (submit)="submit($event)">
+  <div *ngIf="data.type === 'DROPDOWN'">
+    <h1>Selecione o {{ data.title }} desejado:</h1>
+
+    <div *ngFor="let field of data.fields" class="form-group">
+      <label for="formControlField{{ field.label }}">{{ field.label }}</label>
+      <select
+        (change)="selectOption($event)"
+        class="form-control"
+        id="formControlField{{ field.label }}"
+      >
+        <option value="null">Selecione...</option>
+        <option *ngFor="let value of field.values" value="{{ value }}">
+          {{ value }}
+        </option>
+      </select>
+    </div>
+
+    <button [disabled]="!selectedOption" class="btn">Continuar</button>
+  </div>
+</form>

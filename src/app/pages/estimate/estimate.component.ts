@@ -7,22 +7,45 @@ import { EstimateService } from '../../services/estimate.service';
   styleUrls: ['./estimate.component.css']
 })
 export class EstimateComponent implements OnInit {
-  forms: any[];
-  currentForm: number;
+  currentFormIndex: number;
+  forms = [
+    {
+      title: 'ambiente',
+      type: 'DROPDOWN',
+      fields: [{ label: 'Ambiente', values: ['Quarto', 'Sala', 'Cozinha'] }]
+    },
+    {
+      title: 'tipo do móvel',
+      type: 'DROPDOWN',
+      fields: [
+        { label: 'tipo do móvel', values: ['Quarto', 'Sala', 'Cozinha'] }
+      ]
+    }
+  ];
 
   constructor(private estimateService: EstimateService) {
-    this.currentForm = 0;
+    this.currentFormIndex = 0;
   }
 
   ngOnInit() {}
 
   nextForm() {
-    if (this.currentForm < this.forms.length - 1) {
-      this.currentForm += 1;
+    if (this.hasNextForm()) {
+      this.currentFormIndex += 1;
     }
   }
 
   hasNextForm() {
-    return this.currentForm < this.forms.length - 1;
+    return this.currentFormIndex < this.forms.length - 1;
+  }
+
+  previousForm() {
+    if (this.hasPreviousForm()) {
+      this.currentFormIndex -= 1;
+    }
+  }
+
+  hasPreviousForm() {
+    return this.currentFormIndex > 0;
   }
 }
